@@ -5,6 +5,7 @@ using Vuforia;
 public class SimpleCloudHandler : MonoBehaviour, ICloudRecoEventHandler {
 	public ImageTargetBehaviour ImageTargetTemplate;
 
+
 	private CloudRecoBehaviour mCloudRecoBehaviour;
 
 	private bool mIsScanning = false;
@@ -58,6 +59,8 @@ public class SimpleCloudHandler : MonoBehaviour, ICloudRecoEventHandler {
 				(ImageTargetBehaviour)tracker.TargetFinder.EnableTracking(
 					targetSearchResult, ImageTargetTemplate.gameObject);
 		}
+	
+
 	}
 
 	void OnGUI() {
