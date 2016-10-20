@@ -5,8 +5,10 @@ using UnityEngine.SceneManagement;
 public class SceneLoader : MonoBehaviour {
 
 	// Use this for initialization
-	void Start () {
-	
+	IEnumerator Start () {
+		AsyncOperation async = Application.LoadLevelAdditiveAsync (1);
+		yield return async;
+		Debug.Log("Loading complete");
 	}
 	
 	// Update is called once per frame
