@@ -7,6 +7,7 @@ public class SceneLoader : MonoBehaviour {
 	// Use this for initialization
 	IEnumerator Start () {
 		AsyncOperation async = Application.LoadLevelAdditiveAsync (1);
+		async.allowSceneActivation = false;
 		yield return async;
 		Debug.Log("Loading complete");
 	}
