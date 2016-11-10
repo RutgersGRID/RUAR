@@ -1,6 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <QCARConfig xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="qcar_config.xsd">
   <Tracking>
+    <ImageTarget name="Sec6" size="1.000000 0.562500" />
+    <ImageTarget name="Sec5" size="1.000000 0.562500" />
+    <ImageTarget name="Sec4" size="1.000000 0.562500" />
+    <ImageTarget name="Sec3" size="1.000000 0.562500" />
+    <ImageTarget name="Sec2" size="1.000000 0.562500" />
+    <ImageTarget name="Sec1" size="1.000000 0.562500" />
     <ImageTarget name="Screen_Shot_2016-09-22_at_2-48-23_PM-png" size="1.000000 0.613360" />
     <ImageTarget name="Screen_Shot_2016-09-22_at_2-49-01_PM-png" size="1.000000 0.654762" />
     <ImageTarget name="Screen_Shot_2016-09-22_at_2-49-05_PM-png" size="1.000000 0.668950" />
