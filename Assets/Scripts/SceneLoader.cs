@@ -6,7 +6,7 @@ public class SceneLoader : MonoBehaviour {
 
 	// Use this for initialization
 	IEnumerator Start () {
-		AsyncOperation async = Application.LoadLevelAdditiveAsync (1);
+		AsyncOperation async = SceneManager.LoadSceneAsync ("250Mural", LoadSceneMode.Additive);
 		async.allowSceneActivation = false;
 		yield return async;
 		Debug.Log("Loading complete");
@@ -16,7 +16,7 @@ public class SceneLoader : MonoBehaviour {
 	void Update () {
 		if (Input.anyKeyDown) {
 			//Debug.Log ("A key or mouse click has been detected");
-			SceneManager.LoadScene (1);
+			SceneManager.LoadScene ("250Mural");
 		}
 	}
 }
