@@ -26,6 +26,9 @@ public class MenuOptions : MonoBehaviour
         mCamSettings = FindObjectOfType<CameraSettings>();
         mTrackableSettings = FindObjectOfType<TrackableSettings>();
         mMenuAnim = FindObjectOfType<MenuAnimator>();
+
+        VuforiaAbstractBehaviour vuforia = FindObjectOfType<VuforiaAbstractBehaviour>();
+        vuforia.RegisterOnPauseCallback(OnPaused);
     }
     #endregion //MONOBEHAVIOUR_METHODS
 
@@ -33,11 +36,11 @@ public class MenuOptions : MonoBehaviour
     #region PUBLIC_METHODS
     public void ShowAboutPage()
     {
-#if (UNITY_5_2 || UNITY_5_1 || UNITY_5_0)
+        #if (UNITY_5_2 || UNITY_5_1 || UNITY_5_0)
         Application.LoadLevel("Vuforia-1-About");
-#else
+        #else
         UnityEngine.SceneManagement.SceneManager.LoadScene("Vuforia-1-About");
-#endif
+        #endif
     }
 
     public void ToggleAutofocus()
@@ -50,7 +53,8 @@ public class MenuOptions : MonoBehaviour
     public void ToggleTorch()
     {
         Toggle flashToggle = FindUISelectableWithText<Toggle>("Flash");
-        if (flashToggle && mCamSettings) {
+        if (flashToggle && mCamSettings)
+        {
             mCamSettings.SwitchFlashTorch(flashToggle.isOn);
 
             // Update UI toggle status (ON/OFF) in case the flash switch failed
@@ -120,7 +124,8 @@ public class MenuOptions : MonoBehaviour
     protected T FindUISelectableWithText<T>(string text) where T : UnityEngine.UI.Selectable
     {
         T[] uiElements = GetComponentsInChildren<T>();
-        foreach (var uielem in uiElements) {
+        foreach (var uielem in uiElements)
+        {
             string childText = uielem.GetComponentInChildren<Text>().text;
             if (childText.Contains(text))
                 return uielem;
@@ -128,4 +133,21 @@ public class MenuOptions : MonoBehaviour
         return null;
     }
     #endregion //PROTECTED_METHODS
+
+    #region PRIVATE_METHODS
+    private void OnPaused(bool paused)
+    {
+        bool appResumed = !paused;
+        if (appResumed)
+        {
+            // The flash torch is switched off by the OS automatically when app is paused.
+            // On resume, update torch UI toggle to match torch status.
+            Toggle flashToggle = FindUISelectableWithText<Toggle>("Flash");
+
+            if (flashToggle != null)
+                flashToggle.isOn = mCamSettings.IsFlashTorchEnabled();
+        }
+    }
+    #endregion //PRIVATE_METHODS
+
 }
