@@ -7,7 +7,7 @@ using Vuforia;
 /// <summary>
 /// A custom handler that implements the ITrackableEventHandler interface.
 /// </summary>
-public class TrackableEventHandler : MonoBehaviour, ITrackableEventHandler
+public class TrackableEventVideoHandler : MonoBehaviour, ITrackableEventHandler
 {
     #region PRIVATE_MEMBERS
     private TrackableBehaviour mTrackableBehaviour;

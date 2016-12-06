@@ -133,6 +133,9 @@ public class VideoPlaybackBehaviour : MonoBehaviour
 
     void Start()
     {
+		//Check the path
+		Debug.Log("Video Path: " + m_path);
+
         // Find the icon plane (child of this object)
         mIconPlane = transform.Find("Icon").gameObject;
 
@@ -145,7 +148,7 @@ public class VideoPlaybackBehaviour : MonoBehaviour
             this.enabled = false;
         }
         else
-        {
+		{
             // Set the current state to Not Ready
             HandleStateChange(VideoPlayerHelper.MediaState.NOT_READY);
             mCurrentState = VideoPlayerHelper.MediaState.NOT_READY;

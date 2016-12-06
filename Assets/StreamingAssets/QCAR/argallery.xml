@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<QCARConfig xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="qcar_config.xsd">
+  <Tracking>
+    <ImageTarget name="IMG_1937-c" size="1.000000 1.169492" />
+    <ImageTarget name="IMG_1940-c" size="1.000000 0.922034" />
+    <ImageTarget name="IMG_1956-c" size="1.000000 0.668403" />
+    <ImageTarget name="IMG_1957-c" size="1.000000 0.700337" />
+    <ImageTarget name="IMG_1958-c" size="1.000000 0.654991" />
+    <ImageTarget name="IMG_1961-c" size="1.000000 0.782007" />
+    <ImageTarget name="IMG_1962-c" size="1.000000 0.648590" />
+    <ImageTarget name="IMG_1963-c" size="1.000000 0.551876" />
+    <ImageTarget name="IMG_1968-c" size="1.000000 0.668842" />
+    <ImageTarget name="IMG_1971-c" size="1.000000 0.894952" />
+    <ImageTarget name="IMG_1973-c" size="1.000000 0.593103" />
+    <ImageTarget name="IMG_1974-c" size="1.000000 0.588972" />
+    <ImageTarget name="IMG_1976-c" size="1.000000 0.333333" />
+    <ImageTarget name="IMG_1977-c" size="1.000000 0.799353" />
+    <ImageTarget name="IMG_1978-c" size="1.000000 1.080000" />
+    <ImageTarget name="IMG_1997-c" size="1.000000 1.352941" />
+    <ImageTarget name="IMG_1983-c" size="1.000000 1.460993" />
+    <ImageTarget name="IMG_1985-c1" size="1.000000 1.569536" />
+    <ImageTarget name="IMG_1985-c2" size="1.000000 1.445070" />
+    <ImageTarget name="IMG_1994-c" size="1.000000 0.311111" />
+    <ImageTarget name="ref3targ" size="1.000000 0.432870" />
+    <ImageTarget name="ref2targ" size="1.000000 0.407407" />
+    <ImageTarget name="ref1targ" size="1.000000 0.485780" />
+  </Tracking>
+</QCARConfig>
